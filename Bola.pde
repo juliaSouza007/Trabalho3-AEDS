@@ -35,7 +35,8 @@ class Bola {
     }
 
     // Verifica se bateu na plataforma
-    if (posicao.y + raio/2 >= plataforma.posicao.y && posicao.y + raio/2 <= plataforma.posicao.y + plataforma.altura && posicao.x >= plataforma.posicao.x && posicao.x <= plataforma.posicao.x + plataforma.largura) {
+    if (posicao.y + raio/2 >= plataforma.posicao.y && posicao.y + raio/2 <= plataforma.posicao.y + plataforma.altura && 
+        posicao.x >= plataforma.posicao.x && posicao.x <= plataforma.posicao.x + plataforma.largura) {
       velocidade.y *= -1;
       posicao.y = plataforma.posicao.y - raio/2;
     }
