@@ -15,7 +15,7 @@ class Bola {
     this.posicao.x = width / 2;
     this.posicao.y = height / 2;
     this.velocidade.x = random(-5, 5);
-    this.velocidade.y = random(2, 5);
+    this.velocidade.y = random(1, 5);
   }
 
   void Draw() {
