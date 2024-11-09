@@ -17,10 +17,4 @@ void draw() {
   bola.Update(plataforma);
   plataforma.Draw();
   bola.Draw();
-
-  // Verifica se a bola passou pela plataforma
-  if (bola.posicao.y > height) {
-    println("Game Over!");
-    noLoop(); // Para o jogo
-  }
 }
