@@ -13,7 +13,9 @@
       this.vel = vel;
     }
     
-    void update(){    
+    void update(){  
+        pos.x = mouseX;
+    }
       if (auto){
         if (pos.x - (largura/2) <= 0){
           pos.x = largura/2;
