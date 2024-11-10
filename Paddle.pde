@@ -12,11 +12,6 @@
       this.largura = largura;
       this.vel = vel;
     }
-
-void updadte() {
-    pos.x = mouse;
-}
-
     
     void update(){    
       if (auto){
@@ -27,7 +22,8 @@ void updadte() {
           pos.x = width - (largura/2);
           vel *= -1;
         }
-      } else if (pos.x+vel - (largura/2) <= 0 || pos.x + vel + (largura/2) >= width){
+      } else if (pos.x+vel - (largura/2) <= 0 || 
+                 pos.x + vel + (largura/2) >= width){
         vel = 0;
       }
       
