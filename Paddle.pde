@@ -12,6 +12,11 @@
       this.largura = largura;
       this.vel = vel;
     }
+
+void updadte() {
+    pos.x = mouse;
+}
+
     
     void update(){    
       if (auto){
