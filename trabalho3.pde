@@ -1,3 +1,5 @@
+Paddle paddle;
+Bola bola;
 Game game;
 
 final int LARGURA_PLATFORM = 100;
