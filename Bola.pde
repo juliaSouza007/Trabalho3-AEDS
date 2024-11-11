@@ -17,8 +17,8 @@ class Bola {
     
     // Se atingir parede
     if (pos.x - (size/2) <= 0){
-      pos.x = size/2; // Não ultrapassa
-      vel.x *= -1; // Inverte direção
+      pos.x = size/2; 
+      vel.x *= -1; 
     }else if(pos.x + (size/2) >= width){
       pos.x = width - (size/2);
       vel.x *= -1;
@@ -26,8 +26,8 @@ class Bola {
      
     // Se atingir teto/chão
     if (pos.y - (size/2) <= 0){
-      pos.y = size/2; // Não ultrapassa
-      vel.y *= -1; // Inverte direção
+      pos.y = size/2;
+      vel.y *= -1;
     } else if(pos.y + (size/2) >= height){
       fimDeGame = true;
       pos.y = height - (size/2);
@@ -40,7 +40,7 @@ class Bola {
         if (count - lastHit >= 20){
           acertou = true;
           vel.y *= -1;
-          vel.x = (bola.pos.x - paddle.pos.x) / paddle.largura - 0.5; // Valor entre -0.5 e 0.5
+          vel.x = (bola.pos.x - paddle.pos.x) / paddle.largura - 0.5; 
           game.pontuacao++;
           lastHit = count;
         }
