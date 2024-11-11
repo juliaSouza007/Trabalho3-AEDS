@@ -28,6 +28,10 @@ void setup() {
       total += game.pontuacao;
       pontuacaoMax = max(pontuacaoMax, game.pontuacao);
       game.reiniciar();
+      
+      // Calcula a media e exibe pontuação da rodada e media no terminal
+      float media = (float) total / pontuacoes.size();
+      println("Pontuação da rodada:", game.pontuacao, "Média atual:", nf(media, 1, 2));
     }
     
     gameOver = false;
@@ -46,6 +50,11 @@ void draw() {
   if (gameOver) {
     pontuacoes.add(game.pontuacao);
     pontuacaoMax = max(pontuacaoMax, game.pontuacao);
+    
+    // Calcula e exibe a media no terminal
+    float media = (float) total / pontuacoes.size();
+    println("Pontuação da rodada:", game.pontuacao, "Média atual:", nf(media, 1, 2));
+    
     game.reiniciar();
   }
 }
