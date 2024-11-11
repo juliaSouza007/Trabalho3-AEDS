@@ -1,7 +1,6 @@
 class Bola {
   PVector pos, vel;
   float size;
-  int count, lastHit;
 
   Bola(float x, float y, float size, float speed) {
     pos = new PVector(x, y);
@@ -11,8 +10,6 @@ class Bola {
   }
 
   void update() {
-    count++;
-    
     pos.add(vel);
     
     // Se atingir parede
@@ -37,13 +34,10 @@ class Bola {
         pos.x - (size/2) <= paddle.pos.x + (paddle.largura/2) &&
         pos.x + (size/2) >= paddle.pos.x - (paddle.largura/2)) {
 
-        if (count - lastHit >= 20){
-          acertou = true;
-          vel.y *= -1;
-          vel.x = (bola.pos.x - paddle.pos.x) / paddle.largura - 0.5;
-          game.pontuacao++;
-          lastHit = count;
-        }
+        acertou = true;
+        vel.y *= -1;
+        vel.x = (bola.pos.x - paddle.pos.x) / paddle.largura - 0.5;
+        game.pontuacao++;
     }
   }
 
