@@ -44,7 +44,6 @@ class Bola {
           game.pontuacao++;
           lastHit = count;
         }
-      }
     }
     
     this.show();
