@@ -19,7 +19,7 @@ class Bola {
     if (pos.x - (size/2) <= 0){
       pos.x = size/2; 
       vel.x *= -1; 
-    }else if(pos.x + (size/2) >= width){
+    } else if (pos.x + (size/2) >= width){
       pos.x = width - (size/2);
       vel.x *= -1;
     }
@@ -28,7 +28,7 @@ class Bola {
     if (pos.y - (size/2) <= 0){
       pos.y = size/2; 
       vel.y *= -1; 
-    } else if(pos.y + (size/2) >= height){
+    } else if (pos.y + (size/2) >= height){
       gameOver = true;
       pos.y = height - (size/2);
       vel.y *= -1;
