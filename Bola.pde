@@ -29,7 +29,7 @@ class Bola {
       gameOver = true;
     }
 
-    if ( pos.y + (size/2) >= paddle.pos.y - (paddle.altura/2) &&
+    if (pos.y + (size/2) >= paddle.pos.y - (paddle.altura/2) &&
         pos.y - (size/2) <= paddle.pos.y + (paddle.altura/2) &&
         pos.x - (size/2) <= paddle.pos.x + (paddle.largura/2) &&
         pos.x + (size/2) >= paddle.pos.x - (paddle.largura/2)) {
