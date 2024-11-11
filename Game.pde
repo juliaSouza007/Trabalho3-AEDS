@@ -1,9 +1,6 @@
 class Game {
   AgenteRL agente;
 
-  float velocidadePaddle = 5;
-  PVector velocidadeBola = new PVector(-1, 1);
-
   int pontuacao;
   int quadroAtual;
   int quadroUltimaAcao;
