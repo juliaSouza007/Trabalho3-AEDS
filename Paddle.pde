@@ -20,8 +20,6 @@ class Paddle {
     }
 
     pos.x += vel;
-
-    this.show();
   }
 
   void show() {
