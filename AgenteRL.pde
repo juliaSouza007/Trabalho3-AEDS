@@ -33,7 +33,6 @@ class AgenteRL {
 
   int escolherAcao(String estado) {
     float taxaExploracao = max(taxaExploracaoMinima, taxaExploracaoInicial * exp(-decaimentoExploracao * episodios));
-    //println(obterValorQ(estado, 0) + "|" + obterValorQ(estado, 1));
     if (random(1) < taxaExploracao) return round(random(2));
     else {
       if (obterValorQ(estado, 0) >= obterValorQ(estado, 1))
