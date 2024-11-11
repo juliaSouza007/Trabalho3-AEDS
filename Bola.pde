@@ -26,21 +26,21 @@ class Bola {
      
     // Se atingir teto/chão
     if (pos.y - (size/2) <= 0){
-      pos.y = size/2;
-      vel.y *= -1;
+      pos.y = size/2; 
+      vel.y *= -1; 
     } else if(pos.y + (size/2) >= height){
-      fimDeGame = true;
+      gameOver = true;
       pos.y = height - (size/2);
       vel.y *= -1;
     }
 
-    if (pos.y + (size/2) >= paddle.pos.y - (paddle.altura/2) && pos.y - (size/2) <= paddle.pos.y + (paddle.altura/2)) { // Verifica colisão do eixo Y da bola com paddle
+    if ( pos.y + (size/2) >= paddle.pos.y - (paddle.altura/2) && pos.y - (size/2) <= paddle.pos.y + (paddle.altura/2)) { // Verifica colisão do eixo Y da bola com paddle
       if (pos.x - (size/2) <= paddle.pos.x + (paddle.largura/2) && pos.x + (size/2) >= paddle.pos.x - (paddle.largura/2)) {
         
         if (count - lastHit >= 20){
           acertou = true;
           vel.y *= -1;
-          vel.x = (bola.pos.x - paddle.pos.x) / paddle.largura - 0.5; 
+          vel.x = (bola.pos.x - paddle.pos.x) / paddle.largura - 0.5;
           game.pontuacao++;
           lastHit = count;
         }
@@ -51,7 +51,7 @@ class Bola {
   }
 
   void show() {
-    fill(FDF2CB);
+    fill(#FDF2CB);
     ellipse(pos.x, pos.y, size, size);
   }
 }
