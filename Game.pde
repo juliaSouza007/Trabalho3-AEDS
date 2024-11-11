@@ -20,9 +20,9 @@ class Game {
   void reiniciar() {
     
     paddle = new Paddle(width/2, height - 20, ALTURA_PLATFORM, LARGURA_PLATFORM, VELOCIDADE_PLATFORM);
-    bola = new Bola(width/2, height/2, 10, speed);
+    bola = new Bola(width/2, height/2, RAIO_BALL, speed);
     pontuacao = 0;
-    fimDeGame = false;
+    gameOver = false;
     acertou = false;
     quadroAtual = 0;
     quadroUltimaAcao = 0;
@@ -41,7 +41,7 @@ class Game {
 
     // Ação do RL      
       float recompensa = 0;
-      if (fimDeGame){
+      if (gameOver){
         recompensa = -100;
       }else if (acertou){
         recompensa = 10;
@@ -78,8 +78,8 @@ class Game {
     text("Points: " + pontuacao, width - 220, 40);
     text("Media: " + nf(float(total)/float(pontuacoes.size()),1,2),  width - 220, 70);
 
-    if (fimDeGame) {
-      text("Fim de Game", width/2 - 70, height/2);
+    if (gameOver) {
+      text("GameOver", width/2 - 70, height/2);
     }
   }
 }
