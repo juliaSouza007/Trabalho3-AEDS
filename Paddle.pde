@@ -28,6 +28,6 @@ class Paddle {
     rectMode(CENTER);
     noStroke();
     fill(255);
-    rect(pos.x, pos.y, largura, altura, 20);
+    rect(pos.x, pos.y, largura, altura);
   }
 }
