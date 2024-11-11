@@ -51,8 +51,8 @@ class Game {
 
     ultimaAcao = agente.escolherAcao(estadoAtual);
 
-    if (ultimaAcao == 1) paddle.vel = - VELOCIDADE_PLATFORM; // Left
-    else if (ultimaAcao == 2) paddle.vel = VELOCIDADE_PLATFORM; // Right
+    if (ultimaAcao == 1) paddle.vel = - VELOCIDADE_PLATFORM; 
+    else if (ultimaAcao == 2) paddle.vel = VELOCIDADE_PLATFORM; 
 
 
     estadoUltimaAcao = estadoAtual;
