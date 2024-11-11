@@ -15,7 +15,7 @@ ArrayList<Integer> pontuacoes;
 color bgColor = #0D0527;
 
 void setup() {
-  size(1000, 500);
+  size(600, 650);
   total = 0;
   pontuacaoMax = 0;
   game = new Game();
