@@ -8,8 +8,6 @@ class Game {
   int ultimaAcao;
 
   Game() {
-    paddle = new Paddle(width/2, height - 20, ALTURA_PLATFORM, LARGURA_PLATFORM, VELOCIDADE_PLATFORM);
-    bola = new Bola(width/2, height/2, RAIO_BALL, speed);
     agente = new AgenteRL(0.1, 0.99, 1.0, 0.01, 0.001);
     reiniciar();
   }
