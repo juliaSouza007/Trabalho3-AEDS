@@ -10,7 +10,7 @@ final float RAIO_BALL = 20;
 int total;
 int pontuacaoMax;
 
-boolean fimDeGame, acertou;
+boolean gameOver, acertou;
 
 Game game;
 
@@ -37,7 +37,7 @@ void setup() {
   pontuacoes = new ArrayList<Integer>();
   for (int i = 0; i < 100000; i++) {
     game.atualizar();
-    if (fimDeGame) {
+    if (gameOver) {
           game.atualizar();
 
       pontuacoes.add(game.pontuacao);
@@ -45,7 +45,7 @@ void setup() {
       pontuacaoMax = max(pontuacaoMax, game.pontuacao);
       game.reiniciar();
     }
-        fimDeGame = false;
+        gameOver = false;
     acertou = false;
   }
   background(bgColor);
@@ -59,7 +59,7 @@ void draw() {
   game.desenhar();
 
 
-  if (fimDeGame) {
+  if (gameOver) {
     game.atualizar();
 
     pontuacoes.add(game.pontuacao);
