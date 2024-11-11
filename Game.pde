@@ -13,7 +13,6 @@ class Game {
   }
 
   void reiniciar() {
-    
     paddle = new Paddle(width/2, height - 20, ALTURA_PLATFORM, LARGURA_PLATFORM, VELOCIDADE_PLATFORM);
     bola = new Bola(width/2, height/2, RAIO_BALL, speed);
     pontuacao = 0;
