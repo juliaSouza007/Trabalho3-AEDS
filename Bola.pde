@@ -34,7 +34,7 @@ class Bola {
       vel.y *= -1;
     }
 
-    if ( pos.y + (size/2) >= paddle.pos.y - (paddle.altura/2) && pos.y - (size/2) <= paddle.pos.y + (paddle.altura/2)) { // Verifica colisão do eixo Y da bola com paddle
+    if (pos.y + (size/2) >= paddle.pos.y - (paddle.altura/2) && pos.y - (size/2) <= paddle.pos.y + (paddle.altura/2)) { // Verifica colisão do eixo Y da bola com paddle
       if (pos.x - (size/2) <= paddle.pos.x + (paddle.largura/2) && pos.x + (size/2) >= paddle.pos.x - (paddle.largura/2)) {
         
         if (count - lastHit >= 20){
@@ -51,7 +51,7 @@ class Bola {
   }
 
   void show() {
-    fill(255);
+    fill(FDF2CB);
     ellipse(pos.x, pos.y, size, size);
   }
 }
