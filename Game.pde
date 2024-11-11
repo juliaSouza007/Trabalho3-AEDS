@@ -66,8 +66,8 @@ class Game {
     //background(bgColor);
     surface.setTitle(estadoUltimaAcao);
 
-    bola.update();
-    paddle.update();
+    bola.show();
+    paddle.show();
 
     // Exibe pontuação
     fill(#FFFFFF);
