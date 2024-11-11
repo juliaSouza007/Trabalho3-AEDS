@@ -45,8 +45,6 @@ class Bola {
           lastHit = count;
         }
     }
-    
-    this.show();
   }
 
   void show() {
