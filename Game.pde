@@ -37,26 +37,26 @@ class Game {
     quadroAtual++;
 
     // Ação do RL      
-      float recompensa = 0;
-      if (gameOver){
-        recompensa = -100;
-      }else if (acertou){
-        recompensa = 10;
-      }else{
-        recompensa = min(bola.pos.x, paddle.pos.x) / max(bola.pos.x, paddle.pos.x);
-      }
-      
-      String estadoAtual = obterEstado();
-      agente.atualizarValorQ(estadoUltimaAcao, ultimaAcao, recompensa, estadoAtual);
+    float recompensa = 0;
+    if (gameOver){
+      recompensa = -100;
+    }else if (acertou){
+      recompensa = 10;
+    }else{
+      recompensa = min(bola.pos.x, paddle.pos.x) / max(bola.pos.x, paddle.pos.x);
+    }
+    
+    String estadoAtual = obterEstado();
+    agente.atualizarValorQ(estadoUltimaAcao, ultimaAcao, recompensa, estadoAtual);
 
-      ultimaAcao = agente.escolherAcao(estadoAtual);
+    ultimaAcao = agente.escolherAcao(estadoAtual);
 
-      if (ultimaAcao == 1) paddle.vel = - VELOCIDADE_PLATFORM; // Left
-      else if (ultimaAcao == 2) paddle.vel = VELOCIDADE_PLATFORM; // Right
+    if (ultimaAcao == 1) paddle.vel = - VELOCIDADE_PLATFORM; // Left
+    else if (ultimaAcao == 2) paddle.vel = VELOCIDADE_PLATFORM; // Right
 
 
-      estadoUltimaAcao = estadoAtual;
-      quadroUltimaAcao = quadroAtual;
+    estadoUltimaAcao = estadoAtual;
+    quadroUltimaAcao = quadroAtual;
 
     paddle.update();
     bola.update(); 
