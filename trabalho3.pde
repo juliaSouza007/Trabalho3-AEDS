@@ -1,5 +1,6 @@
 Paddle paddle;
 Bola bola;
+Game game;
 
 final int LARGURA_PLATFORM = 100;
 final int ALTURA_PLATFORM = 20;
@@ -9,43 +10,27 @@ final float RAIO_BALL = 20;
 
 int total;
 int pontuacaoMax;
-
 boolean gameOver, acertou;
-
-Game game;
-
 ArrayList<Integer> pontuacoes;
-
 color bgColor = #0D0527;
 
-void keyReleased() {
-  switch(key) {
-  case 'b':
-    bola.vel = new PVector(constrain(random(-1, 1)*10, -1, 1), constrain(random(-1, 1)*10, -1, 1));
-    break;
-  case 'r':
-    setup();
-    break;
-  }
-}
-
 void setup() {
+  size(1000, 500);
   total = 0;
   pontuacaoMax = 0;
-  size(1000, 500);
   game = new Game();
   pontuacoes = new ArrayList<Integer>();
+  
   for (int i = 0; i < 100000; i++) {
     game.atualizar();
     if (gameOver) {
-          game.atualizar();
-
       pontuacoes.add(game.pontuacao);
       total += game.pontuacao;
       pontuacaoMax = max(pontuacaoMax, game.pontuacao);
       game.reiniciar();
     }
-        gameOver = false;
+    
+    gameOver = false;
     acertou = false;
   }
   background(bgColor);
@@ -58,13 +43,9 @@ void draw() {
   game.atualizar();
   game.desenhar();
 
-
   if (gameOver) {
-    game.atualizar();
-
     pontuacoes.add(game.pontuacao);
     pontuacaoMax = max(pontuacaoMax, game.pontuacao);
     game.reiniciar();
-
   }
 }
