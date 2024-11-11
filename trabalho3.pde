@@ -5,7 +5,7 @@ Game game;
 final int LARGURA_PLATFORM = 100;
 final int ALTURA_PLATFORM = 20;
 final float VELOCIDADE_PLATFORM = 1.5;
-final float speed = 5;
+final float speed = 10;
 final float RAIO_BALL = 20;
 
 int total;
